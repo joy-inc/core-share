@@ -1,0 +1,2 @@
+# core-share
+core share
