@@ -13,6 +13,7 @@ public class ShareItem {
     public int mIconResId;
     @NonNull
     public String mName;
+    public DEFAULT mWhat;
 
     public ShareItem(@DrawableRes int iconResId, @NonNull String name) {
 
@@ -23,6 +24,7 @@ public class ShareItem {
     public ShareItem(DEFAULT def) {
 
         this(def.mIconResId, def.mName);
+        mWhat = def;
     }
 
     public enum DEFAULT {

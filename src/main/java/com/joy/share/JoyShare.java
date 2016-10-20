@@ -20,7 +20,6 @@ public class JoyShare {
 
     private final JBottomSheetRvDialog mShareDialog;
     private final ShareAdapter mShareAdapter;
-    private OnItemClickListener<ShareItem> mListener;
 
     public JoyShare(Context context) {
 
@@ -33,11 +32,6 @@ public class JoyShare {
                 .build());
 
         mShareAdapter = new ShareAdapter();
-        mShareAdapter.setOnItemClickListener((position, view, shareItem) -> {
-            mShareDialog.dismiss();
-            if (mListener != null)
-                mListener.onItemClick(position, view, shareItem);
-        });
         mShareDialog.setAdapter(mShareAdapter);
     }
 
@@ -54,6 +48,11 @@ public class JoyShare {
     public final ShareAdapter getAdapter() {
 
         return mShareAdapter;
+    }
+
+    public final List<ShareItem> getData() {
+
+        return mShareAdapter.getData();
     }
 
     public final void setData(List<ShareItem> shareItems) {
@@ -97,7 +96,7 @@ public class JoyShare {
 
     public final void remove(ShareItem item) {
 
-        int removePosition = mShareAdapter.getData().indexOf(item);// TODO 改为 mShareAdapter.indexOf(item);
+        int removePosition = mShareAdapter.indexOf(item);
         mShareAdapter.remove(item);
         mShareAdapter.notifyItemRemoved(removePosition);
     }
@@ -111,7 +110,7 @@ public class JoyShare {
 
     public final void setOnItemClickListener(OnItemClickListener<ShareItem> l) {
 
-        mListener = l;
+        mShareAdapter.setOnItemClickListener(l);
     }
 
     public final void show() {
