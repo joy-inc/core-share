@@ -31,7 +31,7 @@ public class ShareAdapter extends ExRvAdapter<ShareAdapter.ViewHolder, ShareItem
         public void invalidateItemView(int position, ShareItem shareItem) {
 
             mIvIcon.setImageResource(shareItem.mIconResId);
-            mTvName.setText(shareItem.mName);
+            mTvName.setText(shareItem.mNameResId);
         }
     }
 

@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">JoyShare</string>
+    <string name="wechat">微信</string>
+    <string name="wechat_moments">朋友圈</string>
+    <string name="qq">QQ</string>
+    <string name="weibo">微博</string>
+    <string name="email">邮件</string>
+    <string name="copy_link">复制链接</string>
 </resources>
