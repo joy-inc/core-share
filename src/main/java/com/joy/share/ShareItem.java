@@ -18,19 +18,16 @@ public class ShareItem {
     public DEFAULT mDefault;
 
     public ShareItem(@DrawableRes int iconResId, @StringRes int nameResId) {
-
         mIconResId = iconResId;
         mNameResId = nameResId;
     }
 
     public ShareItem(DEFAULT def) {
-
         this(def.mIconResId, def.mNameResId);
         mDefault = def;
     }
 
     public enum DEFAULT {
-
         WECHAT(R.drawable.ic_share_wechat, R.string.wechat),
         WECHAT_MOMENTS(R.drawable.ic_share_wechat_moments, R.string.wechat_moments),
         QQ(R.drawable.ic_share_qq, R.string.qq),
@@ -44,7 +41,6 @@ public class ShareItem {
         public int mNameResId;
 
         DEFAULT(@DrawableRes int iconResId, @StringRes int nameResId) {
-
             mIconResId = iconResId;
             mNameResId = nameResId;
         }

@@ -20,7 +20,6 @@ public class ShareAdapter extends ExRvAdapter<ShareAdapter.ViewHolder, ShareItem
         TextView mTvName;
 
         public ViewHolder(View v) {
-
             super(v);
             mIvIcon = (ImageView) v.findViewById(R.id.ivIcon);
             mTvName = (TextView) v.findViewById(R.id.tvName);
@@ -29,7 +28,6 @@ public class ShareAdapter extends ExRvAdapter<ShareAdapter.ViewHolder, ShareItem
 
         @Override
         public void invalidateItemView(int position, ShareItem shareItem) {
-
             mIvIcon.setImageResource(shareItem.mIconResId);
             mTvName.setText(shareItem.mNameResId);
         }
@@ -37,7 +35,6 @@ public class ShareAdapter extends ExRvAdapter<ShareAdapter.ViewHolder, ShareItem
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
-        return new ViewHolder(inflate(parent, R.layout.lib_item_share));
+        return new ViewHolder(inflateLayout(parent, R.layout.lib_item_share));
     }
 }
