@@ -1,6 +1,7 @@
 package com.joy.share;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.support.v7.widget.GridLayoutManager;
 
 import com.joy.ui.adapter.OnItemClickListener;
@@ -18,16 +19,22 @@ import static com.joy.ui.utils.DimenCons.DP_1_PX;
 
 public class JoyShare {
 
+    private static final int DEFAULT_SPAN_COLUMN = 4;
     private final JBottomSheetRvDialog mShareDialog;
     private final ShareAdapter mShareAdapter;
 
     public JoyShare(Context context) {
+        TypedArray ta = context.obtainStyledAttributes(R.styleable.JBottomSheetRvDialog);
+        int spanColumn = ta.getInteger(R.styleable.JBottomSheetRvDialog_spanColumn, DEFAULT_SPAN_COLUMN);
+        int verticalSpacing = ta.getDimensionPixelSize(R.styleable.JBottomSheetRvDialog_verticalSpacing, 0);
+        int parentPadding = ta.getDimensionPixelSize(R.styleable.JBottomSheetRvDialog_parentPadding, 0);
+        ta.recycle();
         mShareDialog = new JBottomSheetRvDialog(context);
-        mShareDialog.setLayoutManager(new GridLayoutManager(context, 3));
+        mShareDialog.setLayoutManager(new GridLayoutManager(context, spanColumn));
         mShareDialog.addItemDecoration(new ItemDecoration.Builder(context)
                 .dividerSize(0)
-                .verticalSpace(DP_1_PX * 16)
-                .paddingParent(DP_1_PX * 24)
+                .verticalSpace(verticalSpacing)
+                .paddingParent(parentPadding)
                 .build());
         mShareAdapter = new ShareAdapter();
         mShareDialog.setAdapter(mShareAdapter);
