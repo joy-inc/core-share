@@ -33,7 +33,9 @@ public class ShareItem {
         QQ(R.drawable.ic_share_qq, R.string.qq),
         WEIBO(R.drawable.ic_share_weibo, R.string.weibo),
         EMAIL(R.drawable.ic_share_email, R.string.email),
-        COPY_LINK(R.drawable.ic_share_copylink, R.string.copy_link);
+        COPY_LINK(R.drawable.ic_share_copylink, R.string.copy_link),
+        BROWSER(R.drawable.ic_share_browser, R.string.browser),
+        MORE(R.drawable.ic_share_more, R.string.more);
 
         @DrawableRes
         public int mIconResId;

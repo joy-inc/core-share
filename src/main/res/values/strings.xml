@@ -5,4 +5,9 @@
     <string name="weibo">微博</string>
     <string name="email">邮件</string>
     <string name="copy_link">复制链接</string>
+    <string name="browser">在浏览器中打开</string>
+    <string name="more">更多</string>
+
+    <string name="toast_share_copy_finish">已复制到剪贴板</string>
+
 </resources>
