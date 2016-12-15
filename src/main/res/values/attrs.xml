@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="JBottomSheetRvDialog">
-        <attr name="spanColumn" format="integer" />
-        <attr name="verticalSpacing" format="dimension" />
-        <attr name="parentPadding" format="dimension" />
+        <attr name="shareColumn" format="integer" />
+        <attr name="shareVerticalSpacing" format="dimension" />
+        <attr name="shareParentPadding" format="dimension" />
+        <attr name="shareIconWidth" format="dimension" />
+        <attr name="shareIconHeight" format="dimension" />
+        <attr name="shareTextSize" format="dimension" />
+        <attr name="shareTextColor" format="color" />
+        <attr name="shareViewSpacing" format="dimension" />
     </declare-styleable>
 </resources>

@@ -23,6 +23,8 @@ public class ShareAdapter extends ExRvAdapter<ShareAdapter.ViewHolder, ShareItem
             super(v);
             mIvIcon = (ImageView) v.findViewById(R.id.ivIcon);
             mTvName = (TextView) v.findViewById(R.id.tvName);
+            float textSize = mTvName.getTextSize();
+            mTvName.setMaxWidth((int) (textSize * 4.7));
             v.setOnClickListener((v1) -> callbackOnItemClickListener(getLayoutPosition(), v1));
         }
 

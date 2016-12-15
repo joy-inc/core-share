@@ -11,8 +11,6 @@ import com.joy.ui.view.recyclerview.ItemDecoration;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.joy.ui.utils.DimenCons.DP_1_PX;
-
 /**
  * Created by Daisw on 16/9/7.
  */
@@ -25,9 +23,9 @@ public class JoyShare {
 
     public JoyShare(Context context) {
         TypedArray ta = context.obtainStyledAttributes(R.styleable.JBottomSheetRvDialog);
-        int spanColumn = ta.getInteger(R.styleable.JBottomSheetRvDialog_spanColumn, DEFAULT_SPAN_COLUMN);
-        int verticalSpacing = ta.getDimensionPixelSize(R.styleable.JBottomSheetRvDialog_verticalSpacing, 0);
-        int parentPadding = ta.getDimensionPixelSize(R.styleable.JBottomSheetRvDialog_parentPadding, 0);
+        int spanColumn = ta.getInteger(R.styleable.JBottomSheetRvDialog_shareColumn, DEFAULT_SPAN_COLUMN);
+        int verticalSpacing = ta.getDimensionPixelSize(R.styleable.JBottomSheetRvDialog_shareVerticalSpacing, 0);
+        int parentPadding = ta.getDimensionPixelSize(R.styleable.JBottomSheetRvDialog_shareParentPadding, 0);
         ta.recycle();
         mShareDialog = new JBottomSheetRvDialog(context);
         mShareDialog.setLayoutManager(new GridLayoutManager(context, spanColumn));
