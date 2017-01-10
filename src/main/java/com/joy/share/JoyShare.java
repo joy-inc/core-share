@@ -29,7 +29,7 @@ public class JoyShare {
         ta.recycle();
         mShareDialog = new JBottomSheetRvDialog(context);
         mShareDialog.setLayoutManager(new GridLayoutManager(context, spanColumn));
-        mShareDialog.addItemDecoration(new ItemDecoration.Builder(context)
+        mShareDialog.addItemDecoration(ItemDecoration.builder(context)
                 .dividerSize(0)
                 .verticalSpace(verticalSpacing)
                 .paddingParent(parentPadding)
