@@ -1,13 +1,13 @@
 <resources>
-    <string name="wechat">微信</string>
-    <string name="wechat_moments">朋友圈</string>
-    <string name="qq">QQ</string>
-    <string name="weibo">微博</string>
-    <string name="email">邮件</string>
-    <string name="copy_link">复制链接</string>
-    <string name="browser">在浏览器中打开</string>
-    <string name="more">更多</string>
+    <string name="wechat" translatable="false">微信</string>
+    <string name="wechat_moments" translatable="false">朋友圈</string>
+    <string name="qq" translatable="false">QQ</string>
+    <string name="weibo" translatable="false">微博</string>
+    <string name="email" translatable="false">邮件</string>
+    <string name="copy_link" translatable="false">复制链接</string>
+    <string name="browser" translatable="false">在浏览器中打开</string>
+    <string name="more" translatable="false">更多</string>
 
-    <string name="toast_share_copy_finish">已复制到剪贴板</string>
+    <string name="toast_share_copy_finish" translatable="false">已复制到剪贴板</string>
 
 </resources>
