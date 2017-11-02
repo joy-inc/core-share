@@ -38,7 +38,6 @@ public class ShareUtil {
     public static void shareTextUrl(Activity act, String url, String subject, @Nullable CharSequence title) {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
         intent.putExtra(Intent.EXTRA_SUBJECT, subject);
         intent.putExtra(Intent.EXTRA_TEXT, url);
         act.startActivity(Intent.createChooser(intent, title));

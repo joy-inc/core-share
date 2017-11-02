@@ -15,17 +15,16 @@ import com.joy.ui.adapter.ExRvViewHolder;
 public class ShareAdapter extends ExRvAdapter<ShareAdapter.ViewHolder, ShareItem> {
 
     class ViewHolder extends ExRvViewHolder<ShareItem> {
-
         ImageView mIvIcon;
         TextView mTvName;
 
         public ViewHolder(View v) {
             super(v);
-            mIvIcon = (ImageView) v.findViewById(R.id.ivIcon);
-            mTvName = (TextView) v.findViewById(R.id.tvName);
+            mIvIcon = findViewById(R.id.ivIcon);
+            mTvName = findViewById(R.id.tvName);
             float textSize = mTvName.getTextSize();
             mTvName.setMaxWidth((int) (textSize * 4.7));
-            v.setOnClickListener((v1) -> callbackOnItemClickListener(getLayoutPosition(), v1));
+            bindOnClickListener(this);
         }
 
         @Override
